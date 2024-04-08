@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
+    // Complexity: linear - O(N)
     public static int findMinimumRecursive(int[] arr, int startIndex, int endIndex) {
         if (startIndex == endIndex) {
             return arr[startIndex];
@@ -27,17 +28,20 @@ public class Main {
 
         int[] numbers = new int[n];
 
+        // Complexity: linear - O(N)
         System.out.println("Enter " + n + " numbers:");
         for(int i = 0; i < n; i++) {
             numbers[i] = scanner.nextInt();
         }
 
+        // Complexity: linear - O(N)
         int min = findMinimumRecursive(numbers, 0, numbers.length - 1);
         System.out.println("The minimum element is: " + min);
 
         scanner.close();
     }
 }
+
 */
 
 
