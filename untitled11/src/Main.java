@@ -42,6 +42,35 @@ public class Main {
     }
 }
 
+
+
+
+public class Main {
+
+    // Complexity: constant - O(1)
+    public static int firstElement(int[] arr) {
+        return arr[0];
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        int[] numbers = new int[n];
+
+        System.out.println("Enter " + n + " numbers:");
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        // Complexity: constant - O(1)
+        int first = firstElement(numbers);
+        System.out.println("The first element is: " + first);
+
+        scanner.close();
+    }
+}
 */
 
 
