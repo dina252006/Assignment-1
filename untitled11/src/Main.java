@@ -54,6 +54,8 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+    
+    // Complexity: linear - O(N)
     public static int sumArrayElements(int[] arr, int n) {
         if (n <= 0) {
             return 0;
@@ -61,6 +63,7 @@ public class Main {
         return sumArrayElements(arr, n - 1) + arr[n - 1];
     }
 
+    // Complexity: linear - O(N)
     public static double calculateAverage(int[] arr, int n) {
         if (n == 0) return 0;
         int totalSum = sumArrayElements(arr, n);
@@ -69,17 +72,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Enter the number of elements in the array: ");
         int n = scanner.nextInt();
-
+        
         int[] numbers = new int[n];
-
+        
+        // Complexity: linear - O(N)
         System.out.println("Enter " + n + " numbers:");
         for (int i = 0; i < n; i++) {
             numbers[i] = scanner.nextInt();
         }
 
+        // Complexity: linear - O(N)
         double average = calculateAverage(numbers, n);
         System.out.println("The average of the elements is: " + average);
 
@@ -98,6 +102,7 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+    // Complexity: square root - O(sqrt(N))
     public static boolean isPrime(int n) {
         if (n < 2) {
             return false;
@@ -110,6 +115,7 @@ public class Main {
         return true;
     }
 
+    // Complexity: square root - O(sqrt(N))
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number to check if it's prime: ");
@@ -136,6 +142,7 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+    // Complexity: linear - O(N)
     public static long factorial(int n) {
         if (n <= 1) {
             return 1;
@@ -143,6 +150,7 @@ public class Main {
         return n * factorial(n - 1);
     }
 
+    // Complexity: linear - O(N)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number to find its factorial: ");
@@ -166,11 +174,13 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+    // Complexity: exponential - O(2^N)
     public static int fibonacci(int n) {
         if (n <= 1) return n;
         return fibonacci(n-1) + fibonacci(n-2);
     }
 
+    // Complexity: exponential - O(2^N)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
@@ -191,6 +201,7 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+    // Complexity: logarithmic - O(log N)
     public static long power(int a, int n) {
         if (n == 0) return 1;
         if (n == 1) return a;
@@ -202,6 +213,7 @@ public class Main {
         }
     }
 
+    // Complexity: constant - O(1), except for the call to power which is O(log N)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the base (a): ");
@@ -224,12 +236,14 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+    // Complexity: constant - O(1)
     private static void swap(char[] arr, int i, int j) {
         char temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
+    // Complexity: factorial - O(N!)
     private static void generatePermutations(char[] chars, int currentIndex) {
         if (currentIndex == chars.length - 1) {
             System.out.println(String.valueOf(chars));
@@ -238,10 +252,11 @@ public class Main {
         for (int i = currentIndex; i < chars.length; i++) {
             swap(chars, currentIndex, i);
             generatePermutations(chars, currentIndex + 1);
-            swap(chars, currentIndex, i);
+            swap(chars, currentIndex, i); // backtrack
         }
     }
 
+    // Complexity: factorial - O(N!) 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string with distinct symbols: ");
@@ -263,12 +278,14 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+    // Complexity: linear - O(N)
     public static boolean isAllDigits(String s, int index) {
         if (index == s.length()) return true;
         if (!Character.isDigit(s.charAt(index))) return false;
         return isAllDigits(s, index + 1);
     }
 
+    // Complexity: linear - O(N)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
@@ -294,6 +311,7 @@ import java.util.Scanner;
 
 public class Main {
 
+    // Complexity: exponential - O(2^N)
     public static int binomialCoefficient(int n, int k) {
         if (k == 0 || k == n) {
             return 1;
@@ -301,6 +319,7 @@ public class Main {
         return binomialCoefficient(n - 1, k - 1) + binomialCoefficient(n - 1, k);
     }
 
+    // Complexity: exponential - O(2^N)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter n and k: ");
@@ -322,11 +341,13 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+    // Complexity: logarithmic - O(log(min(a, b)))
     public static int gcd(int a, int b) {
         if (b == 0) return a;
         return gcd(b, a % b);
     }
 
+    // Complexity: logarithmic - O(log(min(a, b)))
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
