@@ -2,6 +2,7 @@
 //You are given a number “n” and an array of “n” elements, write the function that returns minimum of them.
 
 /*
+//1
 import java.util.Scanner;
 
 public class Main {
@@ -44,7 +45,7 @@ public class Main {
 
 
 
-
+//2
 public class Main {
 
     // Complexity: constant - O(1)
