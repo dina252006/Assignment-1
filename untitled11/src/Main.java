@@ -2,12 +2,10 @@
 //You are given a number “n” and an array of “n” elements, write the function that returns minimum of them.
 
 /*
-//1
 import java.util.Scanner;
 
 public class Main {
 
-    // Complexity: linear - O(N)
     public static int findMinimumRecursive(int[] arr, int startIndex, int endIndex) {
         if (startIndex == endIndex) {
             return arr[startIndex];
@@ -29,47 +27,13 @@ public class Main {
 
         int[] numbers = new int[n];
 
-        // Complexity: linear - O(N)
         System.out.println("Enter " + n + " numbers:");
         for(int i = 0; i < n; i++) {
             numbers[i] = scanner.nextInt();
         }
 
-        // Complexity: linear - O(N)
         int min = findMinimumRecursive(numbers, 0, numbers.length - 1);
         System.out.println("The minimum element is: " + min);
-
-        scanner.close();
-    }
-}
-*/
-
-
-
-/*
-//2
-public class Main {
-
-    // Complexity: constant - O(1)
-    public static int firstElement(int[] arr) {
-        return arr[0];
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the number of elements in the array: ");
-        int n = scanner.nextInt();
-
-        int[] numbers = new int[n];
-
-        System.out.println("Enter " + n + " numbers:");
-        for (int i = 0; i < n; i++) {
-            numbers[i] = scanner.nextInt();
-        }
-
-        // Complexity: constant - O(1)
-        int first = firstElement(numbers);
-        System.out.println("The first element is: " + first);
 
         scanner.close();
     }
@@ -86,7 +50,7 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
-    
+
     // Complexity: linear - O(N)
     public static int sumArrayElements(int[] arr, int n) {
         if (n <= 0) {
@@ -106,9 +70,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of elements in the array: ");
         int n = scanner.nextInt();
-        
+
         int[] numbers = new int[n];
-        
+
         // Complexity: linear - O(N)
         System.out.println("Enter " + n + " numbers:");
         for (int i = 0; i < n; i++) {
@@ -123,7 +87,6 @@ public class Main {
     }
 }
 */
-
 
 
 
@@ -169,6 +132,7 @@ public class Main {
 
 //Problem 4.
 //You are given a number “n”, write the program using recursion for finding “n!”
+
 
 /*
 import java.util.Scanner;
@@ -288,7 +252,7 @@ public class Main {
         }
     }
 
-    // Complexity: factorial - O(N!) 
+    // Complexity: factorial - O(N!)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string with distinct symbols: ");
@@ -317,7 +281,7 @@ public class Main {
         return isAllDigits(s, index + 1);
     }
 
-    // Complexity: linear - O(N)
+    // Complexity: linear - O(N), depends on isAllDigits
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
@@ -331,7 +295,6 @@ public class Main {
     }
 }
 */
-
 
 
 
@@ -368,7 +331,6 @@ public class Main {
 
 //Problem 10.
 //You are given “a” and “b”, write the function for finding GCD(a, b) using recursion. (Hint: Euclidean Algorithm)
-
 /*
 import java.util.Scanner;
 
@@ -395,3 +357,7 @@ public class Main {
     }
 }
 */
+
+
+
+
